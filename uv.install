@@ -1,0 +1,5 @@
+#!/bin/bash
+
+apt install pipx
+pipx install uv
+pipx ensurepath

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker save -o xfastertransformer-fixed.tar.gz intel/xfastertransformer-fixed:latest

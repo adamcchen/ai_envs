@@ -1,0 +1,5 @@
+#/bin/bash
+
+python -c "import xfastertransformer as xft; xft.LlamaConvert().convert('/data/models/DeepSeek-R1-Distill-Llama-70B', '/data/models/DeepSeek-R1-Distill-Llama-70B-xft')"
+python -c "import xfastertransformer as xft; xft.Qwen2Convert().convert('/data/models/DeepSeek-R1-Distill-Qwen-32B', '/data/models/DeepSeek-R1-Distill-Qwen-32B-xft')"
+python -c "import xfastertransformer as xft; xft.Qwen3Convert().convert('/data/models/Qwen3-30B-A3B', '/data/models/Qwen3-30B-A3B-xft')"

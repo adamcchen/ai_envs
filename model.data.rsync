@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rsync -az --info=progress2 /share/models/DeepSeek-R1-Distill-Llama-70B-xft root@192.168.0.21:/data/models
+rsync -az --info=progress2 /share/models/Qwen3-30B-A3B-xft root@192.168.0.21:/data/models
+rsync -az --info=progress2 /data/models/DeepSeek-R1-Distill-Qwen-32B-xft root@124.89.83.154:/share/models
+
+rsync -az --info=progress2 /share/models/Qwen3-30B-A3B root@192.168.0.27:/data/models
+
+rsync -az --info=progress2 /data/models/DeepSeek-R1-Distill-Qwen-32B-GGUF/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf root@192.168.0.27:/data/models/DeepSeek-R1-Distill-Qwen-32B-GGUF/
+
+
+rsync -az --info=progress2 /data/models/DeepSeek-R1-Distill-Qwen-32B/*.jason root@192.168.0.27:/data/models/DeepSeek-R1-Distill-Qwen-32B/

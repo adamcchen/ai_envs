@@ -1,0 +1,19 @@
+#/bin/bash
+
+docker run \
+  -v /data/models/Qwen3-30B-A3B-GGUF:/models \
+  -p 18080:18080 \
+  local/llama.cpp:server \
+  -m /models/Qwen3-30B-A3B-Q4_K_M.gguf \
+  --port 18080 \
+  --host 0.0.0.0 \
+  -n 4096
+
+docker run \
+  -v /data/models/DeepSeek-R1-Distill-Qwen-32B-GGUF:/models \
+  -p 18080:18080 \
+  local/llama.cpp:server \
+  -m /models/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf \
+  --port 18080 \
+  --host 0.0.0.0 \
+  -n 4096

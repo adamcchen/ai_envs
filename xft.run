@@ -1,0 +1,27 @@
+#!/bin/bash
+
+cd /root/xFasterTransformer/benchmark
+
+bash run_benchmark.sh --model_name qwen3_moe \
+  --model_path /data/models/Qwen3-30B-A3B-xft \
+  --token_path /data/models/Qwen3-30B-A3B \
+  --dtype int4 --sockets 1 --batch_size 1 \
+  --input_tokens 32 --output_tokens 128 --iter 1
+
+bash run_benchmark.sh --model_name qwen3_moe \
+  --model_path /data/models/Qwen3-30B-A3B-xft \
+  --token_path /data/models/Qwen3-30B-A3B \
+  --dtype int8 --sockets 2 --batch_size 1 \
+  --input_tokens 32 --output_tokens 128 --iter 1
+
+bash run_benchmark.sh --model_name qwen2 \
+  --model_path /data/models/DeepSeek-R1-Distill-Qwen-32B-xft \
+  --token_path /data/models/DeepSeek-R1-Distill-Qwen-32B \
+  --dtype int4 --sockets 1 --batch_size 1 \
+  --input_tokens 32 --output_tokens 128 --iter 1
+
+bash run_benchmark.sh --model_name qwen2 \
+  --model_path /data/models/DeepSeek-R1-Distill-Qwen-32B-xft \
+  --token_path /data/models/DeepSeek-R1-Distill-Qwen-32B \
+  --dtype int8 --sockets 1 --batch_size 1 \
+  --input_tokens 32 --output_tokens 128 --iter 1

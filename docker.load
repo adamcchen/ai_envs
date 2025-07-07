@@ -1,0 +1,4 @@
+#/bin/bash
+
+docker load -i llamacpp_hugepage.tar
+docker load -i xfastertransformer-fixed.tar.gz
